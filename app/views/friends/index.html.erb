@@ -1,15 +1,17 @@
+<% if user_signed_in? %>
+
+
+
 <h1>Friend List</h1>
 
 <div id="friends">
 <table class="table table-hover table-bordered">
  <thead class="table-dark" >
   <tr>
-   <th>First name</th>
-   <th>Last name</th>
+   <th>Name</th>
    <th>Email</th>
    <th>Phone</th>
    <th>Twitter</th>
-   <th colspan="3"></th>
   </tr>
  </thead>
  <tbody>
@@ -22,3 +24,10 @@
 </div>
 
 <%= link_to "New friend", new_friend_path , class:"btn btn-dark"%>
+
+<% else %>
+
+<h1>Hello User!</h1>
+<p>This is my first rails website</p>
+<h4>Login To Add or See Friend</h4>
+<% end %>

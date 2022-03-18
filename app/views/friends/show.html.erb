@@ -1,5 +1,5 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
-<div class="jumbotron jumbotron-fluid">
+<div class="jumbotron">
   <div class="container">
    <h1 class="card-title"><%= @friend.first_name %>
     <%= @friend.last_name %></h1>
@@ -12,7 +12,8 @@
     <a>
     <%= link_to "Edit", edit_friend_path(@friend) , class:"btn btn-secondary" %>
     <%= link_to "Back", friends_path , class:"btn btn-dark"%>
-    <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' } ,class:"btn btn-danger"%>
-   </a>
-  </div>  
+    </a>
+    <br></br>
+    <a><%= button_to 'Delete', @friend, method: :delete, confirm: 'Are you sure?' ,class:"btn btn-danger"%></a> 
+  </div> 
 </div>  
